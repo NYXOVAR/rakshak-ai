@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#081522">
+<title>RAKSHAK AI | Defence Safety & Readiness</title>
+<style>
+:root{--bg:#081522;--panel:#101f2e;--panel2:#14283a;--line:#23394c;--text:#e8f0f5;--muted:#91a6b7;--teal:#55d6be;--blue:#65a9ff;--amber:#ffc66d;--red:#ff737d;--green:#70d6a8;--shadow:0 14px 40px #0003}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0%,#17344a 0,transparent 34%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:248px 1fr}.sidebar{background:#091724eF;border-right:1px solid var(--line);padding:24px 16px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;align-items:center;gap:12px;padding:0 8px}.brandmark{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#55d6be,#278c91);display:grid;place-items:center;color:#061922;font-weight:900;font-size:20px}.brand b{display:block;letter-spacing:1.5px}.brand small{color:var(--muted);font-size:10px;letter-spacing:1.5px}.navlabel{color:#688195;font-size:10px;font-weight:800;letter-spacing:1.8px;padding:0 10px;margin-bottom:6px}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#a9bdcc;text-align:left;padding:11px 12px;border-radius:10px;display:flex;gap:12px;align-items:center}.nav button:hover,.nav button.active{background:#173044;color:var(--teal)}.nav .ico{width:20px;text-align:center;font-size:17px}.side-note{margin-top:auto;background:#102638;border:1px solid var(--line);padding:14px;border-radius:13px;color:var(--muted);font-size:12px}.side-note b{color:var(--teal);display:block;margin-bottom:5px}.main{min-width:0;padding:26px clamp(16px,3vw,38px) 40px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:28px}.eyebrow{color:var(--teal);font-size:11px;letter-spacing:2px;font-weight:800}.topbar h1{font-size:clamp(22px,3vw,30px);margin:4px 0 0;letter-spacing:-.7px}.top-actions{display:flex;align-items:center;gap:10px}.pill{border:1px solid var(--line);background:#102638;padding:8px 12px;border-radius:30px;color:#b9cbd7;font-size:12px}.live-dot{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:7px;box-shadow:0 0 12px var(--green)}.primary,.secondary,.danger{border:0;border-radius:9px;padding:10px 14px;font-weight:700}.primary{background:var(--teal);color:#062027}.primary:hover{filter:brightness(1.08)}.secondary{background:#1b354a;color:#dceaf2;border:1px solid #2c4a61}.danger{background:#4b2630;color:#ffdce0;border:1px solid #75404a}.grid{display:grid;gap:16px}.stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:18px}.card{background:linear-gradient(145deg,#122638,#0e1e2c);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow);min-width:0}.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}.stat-icon{width:34px;height:34px;border-radius:10px;background:#1b3b4b;display:grid;place-items:center;color:var(--teal);font-size:17px}.stat-value{font-size:30px;font-weight:800;letter-spacing:-1px;margin:10px 0 1px}.stat-foot{font-size:11px;color:var(--muted)}.two{grid-template-columns:1.25fr .75fr}.three{grid-template-columns:repeat(3,minmax(0,1fr))}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.section-head h2{font-size:16px;margin:0}.section-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.status{font-size:10px;font-weight:800;letter-spacing:1px;border-radius:30px;padding:5px 8px;background:#173d37;color:var(--green)}.status.warn{background:#44351e;color:var(--amber)}.status.bad{background:#48262d;color:#ff9aa1}.bar-row{display:grid;grid-template-columns:115px 1fr 34px;align-items:center;gap:10px;margin:15px 0;font-size:12px;color:#b8c8d3}.bar{height:8px;border-radius:9px;background:#20394c;overflow:hidden}.bar span{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,#299f9b,var(--teal))}.activity{display:grid;gap:0}.activity-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #203647}.activity-item:last-child{border:0}.activity-icon{width:32px;height:32px;flex:none;border-radius:10px;background:#1b3548;display:grid;place-items:center}.activity-item b{font-size:12px;display:block}.activity-item small{color:var(--muted);font-size:11px}.page{display:none}.page.active{display:block}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:#b7c8d4;font-weight:700}.field input,.field select,.field textarea,.chat-input{width:100%;background:#091a28;border:1px solid #2a4357;border-radius:9px;padding:11px 12px;color:var(--text);outline:none}.field textarea{min-height:90px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus,.chat-input:focus{border-color:var(--teal);box-shadow:0 0 0 3px #55d6be18}.form-actions{display:flex;gap:9px;margin-top:15px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px;min-width:550px}th{text-align:left;color:#7f98aa;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:11px;border-bottom:1px solid var(--line)}td{padding:13px 11px;border-bottom:1px solid #1c3345;color:#d4e0e8}tr:last-child td{border:0}.empty{text-align:center;color:var(--muted);padding:30px}.tag{padding:4px 8px;border-radius:20px;font-size:10px;background:#20394c;color:#bcd0dc}.tag.high{background:#48262d;color:#ff9aa1}.tag.medium{background:#44351e;color:var(--amber)}.tag.low{background:#173d37;color:var(--green)}.chatbox{height:390px;display:flex;flex-direction:column}.messages{flex:1;overflow:auto;display:flex;flex-direction:column;gap:11px;padding:4px 2px 15px}.msg{max-width:88%;padding:11px 13px;border-radius:12px;background:#1a3347;color:#dce8ef;font-size:13px;white-space:pre-wrap}.msg.user{align-self:flex-end;background:#16443f}.msg small{display:block;color:#9db4c3;font-size:10px;margin-bottom:4px}.chatform{display:flex;gap:8px}.chatform input{flex:1;min-width:0}.quick{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.quick button{border:1px solid #2b4b60;background:#122b3e;color:#bcd0dc;padding:7px 9px;border-radius:20px;font-size:11px}.checklist{display:grid;gap:10px}.check{display:flex;gap:11px;align-items:flex-start;padding:12px;border:1px solid #263e50;border-radius:10px;background:#0d1e2b}.check input{accent-color:var(--teal);margin-top:4px;transform:scale(1.15)}.check span{font-size:13px}.check small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.progress{height:9px;background:#20394c;border-radius:9px;overflow:hidden;margin:12px 0}.progress span{display:block;height:100%;background:var(--teal);width:0;transition:.2s}.emergency-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.emergency{border:1px solid #3c3a32;background:linear-gradient(145deg,#302b20,#171f27);border-radius:14px;padding:16px}.emergency h3{font-size:14px;margin:0 0 6px}.emergency p{font-size:12px;color:#c1b9a7;margin:0 0 12px}.notice{border:1px solid #69532f;background:#322b1e;color:#f4d59d;border-radius:12px;padding:13px;font-size:12px;margin-bottom:16px}.muted{color:var(--muted)}.footer{text-align:center;color:#647f92;font-size:10px;margin:28px 0 0}.toast{position:fixed;right:20px;bottom:20px;background:#173d37;border:1px solid #2b776a;color:#d8fff3;padding:12px 16px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:.2s;pointer-events:none;z-index:10}.toast.show{opacity:1;transform:translateY(0)}.mobile-menu{display:none}
+@media(max-width:900px){.app{grid-template-columns:1fr}.sidebar{position:fixed;z-index:5;inset:0 auto 0 0;width:250px;transform:translateX(-105%);transition:.2s;box-shadow:var(--shadow)}.sidebar.open{transform:translateX(0)}.mobile-menu{display:inline-flex}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}.emergency-grid{grid-template-columns:1fr}.main{padding-top:18px}}
+@media(max-width:520px){.topbar{align-items:flex-start}.top-actions .pill{display:none}.stats{gap:10px}.card{padding:14px}.stat-value{font-size:25px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.three{grid-template-columns:1fr}.topbar h1{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brandmark">R</div><div><b>RAKSHAK AI</b><small>SAFETY & READINESS</small></div></div>
+  <div><div class="navlabel">WORKSPACE</div><nav class="nav">
+    <button class="active" data-page="dashboard"><span class="ico">▦</span>Command dashboard</button>
+    <button data-page="assistant"><span class="ico">✧</span>AI safety assistant</button>
+    <button data-page="incidents"><span class="ico">⚑</span>Incident reports</button>
+    <button data-page="equipment"><span class="ico">▣</span>Equipment maintenance</button>
+    <button data-page="emergency"><span class="ico">✚</span>Emergency response</button>
+    <button data-page="checklist"><span class="ico">☑</span>Safety checklist</button>
+  </nav></div>
+  <div><div class="navlabel">DATA & SETTINGS</div><nav class="nav">
+    <button id="exportBtn"><span class="ico">⇩</span>Export demo data</button>
+    <button id="resetBtn"><span class="ico">↻</span>Reset demo data</button>
+  </nav></div>
+  <div class="side-note"><b>● DEMO ENVIRONMENT</b>Use fictional, non-sensitive information only. Records are stored in this browser on this device.</div>
+</aside>
+<main class="main">
+<header class="topbar">
+  <div style="display:flex;gap:12px;align-items:flex-start"><button class="secondary mobile-menu" id="menuBtn">☰</button><div><div class="eyebrow">DEFENCE SAFETY INTELLIGENCE</div><h1 id="pageTitle">Command dashboard</h1></div></div>
+  <div class="top-actions"><span class="pill"><span class="live-dot"></span>Systems demo online</span><span class="pill" id="today"></span></div>
+</header>
+
+<section class="page active" id="dashboard">
+  <div class="notice">Training demonstration only. This dashboard uses locally stored sample data and simulated alerts; it is not connected to defence infrastructure or emergency services.</div>
+  <div class="grid stats">
+    <div class="card"><div class="stat-top"><span>Open incidents</span><span class="stat-icon">⚑</span></div><div class="stat-value" id="statIncidents">0</div><div class="stat-foot">Reports awaiting review</div></div>
+    <div class="card"><div class="stat-top"><span>Equipment records</span><span class="stat-icon">▣</span></div><div class="stat-value" id="statEquipment">0</div><div class="stat-foot">Items in maintenance register</div></div>
+    <div class="card"><div class="stat-top"><span>Checklist completion</span><span class="stat-icon">☑</span></div><div class="stat-value" id="statChecklist">0%</div><div class="stat-foot">Safety checks completed</div></div>
+    <div class="card"><div class="stat-top"><span>High priority</span><span class="stat-icon">!</span></div><div class="stat-value" id="statHigh">0</div><div class="stat-foot">High-priority reports</div></div>
+  </div>
+  <div class="grid two">
+    <div class="card"><div class="section-head"><div><h2>Readiness overview</h2><p>Illustrative safety programme indicators</p></div><span class="status">DEMO</span></div>
+      <div class="bar-row"><span>Personnel safety</span><div class="bar"><span style="width:92%"></span></div><b>92%</b></div>
+      <div class="bar-row"><span>Inspection process</span><div class="bar"><span style="width:76%"></span></div><b>76%</b></div>
+      <div class="bar-row"><span>Emergency training</span><div class="bar"><span style="width:84%"></span></div><b>84%</b></div>
+      <div class="bar-row"><span>Reporting discipline</span><div class="bar"><span style="width:68%"></span></div><b>68%</b></div>
+      <p class="muted" style="font-size:10px;margin:17px 0 0">Illustrative values only; not measured operational readiness.</p>
+    </div>
+    <div class="card"><div class="section-head"><div><h2>Recent activity</h2><p>Latest locally saved records</p></div><span class="tag">LIVE LOCAL</span></div><div class="activity" id="activity"><div class="empty">No activity yet. Add a report or equipment record to get started.</div></div></div>
+  </div>
+  <div class="grid three" style="margin-top:16px">
+    <div class="card"><div class="section-head"><h2>Report a safety issue</h2><span>⚑</span></div><p class="muted" style="font-size:12px">Document a non-sensitive incident for review.</p><button class="primary" onclick="showPage('incidents')">Create incident report →</button></div>
+    <div class="card"><div class="section-head"><h2>Check equipment</h2><span>▣</span></div><p class="muted" style="font-size:12px">Maintain an inspection and service log.</p><button class="secondary" onclick="showPage('equipment')">Open maintenance →</button></div>
+    <div class="card"><div class="section-head"><h2>Prepare for emergencies</h2><span>✚</span></div><p class="muted" style="font-size:12px">Review basic safety actions and contacts.</p><button class="secondary" onclick="showPage('emergency')">View response guide →</button></div>
+  </div>
+</section>
+
+<section class="page" id="assistant">
+  <div class="notice">This is an offline, rule-based safety assistant—not a generative AI service. It does not replace trained responders, medical professionals, official procedures or local emergency services.</div>
+  <div class="grid two">
+    <div class="card chatbox"><div class="section-head"><div><h2>RAKSHAK Safety Assistant</h2><p>Ask about preparedness, first aid or reporting</p></div><span class="status">OFFLINE MODE</span></div>
+      <div class="messages" id="messages"><div class="msg"><small>RAKSHAK ASSISTANT</small>Hello. I can share general safety guidance. Try asking: “What should I do for a fire?”, “How do I report an incident?” or “Basic first aid for a minor cut?”</div></div>
+      <div class="quick"><button onclick="quickAsk('What should I do during a fire?')">Fire safety</button><button onclick="quickAsk('How do I report an incident?')">Report incident</button><button onclick="quickAsk('Basic first aid for a minor cut?')">Minor cut first aid</button><button onclick="quickAsk('How can I prepare an emergency kit?')">Emergency kit</button></div>
+      <form class="chatform" id="chatForm"><input class="chat-input" id="chatInput" placeholder="Ask a general safety question…" autocomplete="off"><button class="primary">Send</button></form>
+    </div>
+    <div class="card"><h2 style="font-size:16px;margin-top:0">Assistant capabilities</h2><div class="activity">
+      <div class="activity-item"><div class="activity-icon">🔥</div><div><b>Fire & evacuation awareness</b><small>General actions, evacuation and assembly-point reminders.</small></div></div>
+      <div class="activity-item"><div class="activity-icon">✚</div><div><b>Basic first-aid awareness</b><small>Conservative first steps and when to seek urgent care.</small></div></div>
+      <div class="activity-item"><div class="activity-icon">⚑</div><div><b>Incident documentation</b><small>What information belongs in a factual report.</small></div></div>
+      <div class="activity-item"><div class="activity-icon">🎒</div><div><b>Preparedness planning</b><small>Emergency kit and communication planning.</small></div></div>
+    </div><p class="muted" style="font-size:11px;margin-top:15px">For immediate danger, contact local emergency services and follow your organisation’s approved emergency plan. In India, the integrated emergency number is 112.</p></div>
+  </div>
+</section>
+
+<section class="page" id="incidents">
+  <div class="grid two">
+    <div class="card"><div class="section-head"><div><h2>New incident report</h2><p>Use fictional or non-sensitive training data</p></div><span class="tag">FORM</span></div>
+      <form id="incidentForm"><div class="form-grid">
+        <div class="field"><label for="iTitle">Incident title *</label><input id="iTitle" required maxlength="80" placeholder="e.g. Slip hazard in corridor"></div>
+        <div class="field"><label for="iCategory">Category</label><select id="iCategory"><option>Safety hazard</option><option>Minor injury</option><option>Fire / electrical</option><option>Equipment issue</option><option>Other</option></select></div>
+        <div class="field"><label for="iPriority">Priority</label><select id="iPriority"><option>Low</option><option selected>Medium</option><option>High</option></select></div>
+        <div class="field"><label for="iLocation">General location (no sensitive details)</label><input id="iLocation" placeholder="e.g. Training block"></div>
+        <div class="field full"><label for="iDesc">Factual description *</label><textarea id="iDesc" required maxlength="500" placeholder="Describe what happened, when, and any immediate safety action taken."></textarea></div>
+      </div><div class="form-actions"><button class="primary">Save report</button><button type="reset" class="secondary">Clear</button></div></form>
+    </div>
+    <div class="card"><div class="section-head"><div><h2>Reporting principles</h2><p>Make records useful and factual</p></div></div><div class="activity">
+      <div class="activity-item"><div class="activity-icon">1</div><div><b>Record observable facts</b><small>Avoid assumptions, blame or speculation.</small></div></div>
+      <div class="activity-item"><div class="activity-icon">2</div><div><b>Prioritise immediate safety</b><small>Move away from danger and notify the responsible supervisor.</small></div></div>
+      <div class="activity-item"><div class="activity-icon">3</div><div><b>Protect privacy</b><small>Do not include personal identifiers or classified information.</small></div></div>
+    </div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><div class="section-head"><div><h2>Incident register</h2><p id="incidentCount">0 reports</p></div></div><div class="table-wrap"><table><thead><tr><th>Report</th><th>Category</th><th>Priority</th><th>Location</th><th>Date</th><th>Status</th></tr></thead><tbody id="incidentRows"><tr><td colspan="6" class="empty">No reports recorded.</td></tr></tbody></table></div></div>
+</section>
+
+<section class="page" id="equipment">
+  <div class="grid two">
+    <div class="card"><div class="section-head"><div><h2>Add equipment record</h2><p>For ordinary safety and facility assets</p></div></div>
+      <form id="equipmentForm"><div class="form-grid">
+        <div class="field"><label for="eName">Equipment / asset name *</label><input id="eName" required maxlength="70" placeholder="e.g. First-aid kit"></div>
+        <div class="field"><label for="eType">Asset type</label><select id="eType"><option>First-aid</option><option>Fire safety</option><option>Electrical safety</option><option>Facility</option><option>Other</option></select></div>
+        <div class="field"><label for="eStatus">Condition</label><select id="eStatus"><option>Operational</option><option>Needs inspection</option><option>Out of service</option></select></div>
+        <div class="field"><label for="eDate">Last inspection date</label><input id="eDate" type="date"></div>
+        <div class="field full"><label for="eNotes">Maintenance notes</label><textarea id="eNotes" maxlength="300" placeholder="Inspection result or maintenance action"></textarea></div>
+      </div><div class="form-actions"><button class="primary">Save equipment</button><button type="reset" class="secondary">Clear</button></div></form>
+    </div>
+    <div class="card"><h2 style="font-size:16px;margin-top:0">Maintenance best practices</h2><div class="activity">
+      <div class="activity-item"><div class="activity-icon">✓</div><div><b>Follow manufacturer guidance</b><small>Use approved inspection intervals and trained technicians.</small></div></div>
+      <div class="activity-item"><div class="activity-icon">▤</div><div><b>Keep an audit trail</b><small>Record inspection dates, findings and corrective actions.</small></div></div>
+      <div class="activity-item"><div class="activity-icon">!</div><div><b>Isolate unsafe items</b><small>Clearly mark defective items and notify the responsible person.</small></div></div>
+    </div></div>
+  </div>
+  <div class="card" style="margin-top:16px"><div class="section-head"><div><h2>Equipment register</h2><p id="equipmentCount">0 assets</p></div></div><div class="table-wrap"><table><thead><tr><th>Asset</th><th>Type</th><th>Condition</th><th>Last inspection</th><th>Notes</th></tr></thead><tbody id="equipmentRows"><tr><td colspan="5" class="empty">No equipment records.</td></tr></tbody></table></div></div>
+</section>
+
+<section class="page" id="emergency">
+  <div class="notice">If there is an actual emergency, call the appropriate local emergency service immediately. This page only simulates an alert for demonstration; it does not notify anyone.</div>
+  <div class="grid emergency-grid">
+    <div class="emergency"><div style="font-size:24px">🚑</div><h3>Medical emergency</h3><p>Seek trained medical help. Do not move a seriously injured person unless there is immediate danger.</p><button class="secondary" onclick="showToast('Medical response reminder displayed. No call was placed.')">Show reminder</button></div>
+    <div class="emergency"><div style="font-size:24px">🔥</div><h3>Fire / smoke</h3><p>Raise the alarm, evacuate using a safe route, avoid lifts and go to the designated assembly point.</p><button class="secondary" onclick="showToast('Fire safety reminder displayed. No alert was sent.')">Show reminder</button></div>
+    <div class="emergency"><div style="font-size:24px">⚡</div><h3>Electrical hazard</h3><p>Keep away, do not touch exposed wires or equipment, and notify qualified facilities staff.</p><button class="secondary" onclick="showToast('Electrical safety reminder displayed. No alert was sent.')">Show reminder</button></div>
+  </div>
+  <div class="grid two" style="margin-top:16px">
+    <div class="card"><div class="section-head"><div><h2>Emergency contacts</h2><p>Public emergency numbers for India</p></div><span class="tag">REFERENCE</span></div>
+      <div class="activity-item"><div class="activity-icon">112</div><div><b>Integrated emergency response</b><small>112 – Police, fire and medical emergency assistance</small></div></div>
+      <div class="activity-item"><div class="activity-icon">108</div><div><b>Ambulance service</b><small>108 – Ambulance service availability varies by state</small></div></div>
+      <p class="muted" style="font-size:11px">Confirm local service availability and follow official instructions.</p>
+    </div>
+    <div class="card"><div class="section-head"><div><h2>Alert simulation</h2><p>Demonstration-only notification workflow</p></div></div>
+      <div class="field"><label for="alertType">Alert type</label><select id="alertType"><option>Safety drill</option><option>Fire drill</option><option>Medical response drill</option><option>Facility inspection notice</option></select></div>
+      <div class="field" style="margin-top:12px"><label for="alertMessage">Message</label><textarea id="alertMessage">This is a scheduled training demonstration. Follow the approved safety plan.</textarea></div>
+      <button class="primary" style="margin-top:12px" onclick="simulateAlert()">Run alert simulation</button><div id="alertResult" class="muted" style="font-size:12px;margin-top:10px"></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="checklist">
+  <div class="grid two">
+    <div class="card"><div class="section-head"><div><h2>Daily safety inspection</h2><p>Tick items after checking them in person</p></div><span class="status">INTERACTIVE</span></div>
+      <div class="stat-top"><span>Completion</span><b id="checkPercent">0%</b></div><div class="progress"><span id="checkBar"></span></div>
+      <div class="checklist" id="checkItems">
+        <label class="check"><input type="checkbox" data-check="0"><span><b>Emergency exits are accessible</b><small>Check that exits and pathways are clear.</small></span></label>
+        <label class="check"><input type="checkbox" data-check="1"><span><b>First-aid supplies are available</b><small>Check kit location, contents and expiry dates.</small></span></label>
+        <label class="check"><input type="checkbox" data-check="2"><span><b>Fire safety equipment is accessible</b><small>Check visible access and inspection labels.</small></span></label>
+        <label class="check"><input type="checkbox" data-check="3"><span><b>Walkways are free of trip hazards</b><small>Remove or report spills, cables and obstructions.</small></span></label>
+        <label class="check"><input type="checkbox" data-check="4"><span><b>Emergency contacts are displayed</b><small>Confirm contact information is current.</small></span></label>
+        <label class="check"><input type="checkbox" data-check="5"><span><b>Staff know the assembly point</b><small>Confirm people know the approved evacuation location.</small></span></label>
+        <label class="check"><input type="checkbox" data-check="6"><span><b>Safety issues have been reported</b><small>Log hazards through the responsible reporting process.</small></span></label>
+      </div>
+      <div class="form-actions"><button class="secondary" onclick="clearChecklist()">Clear checklist</button><button class="primary" onclick="showToast('Checklist progress saved on this device.')">Save progress</button></div>
+    </div>
+    <div class="card"><h2 style="font-size:16px;margin-top:0">Why checklists matter</h2><p class="muted" style="font-size:13px">A consistent checklist helps teams identify common hazards, verify basic preparedness and document follow-up actions. It supports—but does not replace—formal inspections and approved procedures.</p><div class="notice" style="margin-top:18px">A checked item means it was marked complete in this demo. The application cannot independently verify the physical condition of a site or asset.</div><h3 style="font-size:14px">Good inspection habits</h3><ul class="muted" style="font-size:12px;padding-left:18px;line-height:2"><li>Inspect carefully; never assume an item is safe.</li><li>Record defects and notify the responsible supervisor.</li><li>Do not attempt repairs beyond your training.</li><li>Recheck corrective actions and document closure.</li></ul></div>
+  </div>
+</section>
+<div class="footer">RAKSHAK AI • STUDENT INNOVATION DEMO • LOCAL DATA ONLY • NOT AN OFFICIAL DEFENCE SYSTEM</div>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);
+const store={get(k,d){try{return JSON.parse(localStorage.getItem('rakshak_'+k))??d}catch{return d}},set(k,v){localStorage.setItem('rakshak_'+k,JSON.stringify(v))}};
+let incidents=store.get('incidents',[]), equipment=store.get('equipment',[]);
+const titles={dashboard:'Command dashboard',assistant:'AI safety assistant',incidents:'Incident reports',equipment:'Equipment maintenance',emergency:'Emergency response',checklist:'Safety checklist'};
+function showPage(name){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===name));document.querySelectorAll('.nav button[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===name));$('pageTitle').textContent=titles[name];$('sidebar').classList.remove('open');if(name==='dashboard')renderDashboard();if(name==='incidents')renderIncidents();if(name==='equipment')renderEquipment()}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+$('menuBtn').addEventListener('click',()=>$('sidebar').classList.toggle('open'));
+$('today').textContent=new Intl.DateTimeFormat('en-IN',{dateStyle:'medium'}).format(new Date());
+function showToast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
+function safe(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderDashboard(){
+ $('statIncidents').textContent=incidents.filter(x=>x.status!=='Closed').length;
+ $('statEquipment').textContent=equipment.length;
+ const checks=[...document.querySelectorAll('[data-check]')];const done=checks.filter(x=>x.checked).length;
+ $('statChecklist').textContent=Math.round(done/checks.length*100)+'%';
+ $('statHigh').textContent=incidents.filter(x=>x.priority==='High'&&x.status!=='Closed').length;
+ const items=[...incidents.map(x=>({icon:'⚑',title:'Incident: '+x.title,sub:x.date+' · '+x.priority+' priority'})),...equipment.map(x=>({icon:'▣',title:'Asset: '+x.name,sub:x.date||'Inspection date not set'}))].slice(-5).reverse();
+ $('activity').innerHTML=items.length?items.map(x=>`<div class="activity-item"><div class="activity-icon">${x.icon}</div><div><b>${safe(x.title)}</b><small>${safe(x.sub)}</small></div></div>`).join(''):'<div class="empty">No activity yet. Add a report or equipment record to get started.</div>';
+}
+$('incidentForm').addEventListener('submit',e=>{e.preventDefault();incidents.unshift({id:Date.now(),title:$('iTitle').value.trim(),category:$('iCategory').value,priority:$('iPriority').value,location:$('iLocation').value.trim()||'Not specified',description:$('iDesc').value.trim(),date:new Date().toLocaleString(),status:'Open'});store.set('incidents',incidents);e.target.reset();renderIncidents();renderDashboard();showToast('Incident report saved on this device.')});
+function renderIncidents(){$('incidentCount').textContent=incidents.length+' reports';$('incidentRows').innerHTML=incidents.length?incidents.map(x=>`<tr><td><b>${safe(x.title)}</b><br><span class="muted">${safe(x.description)}</span></td><td>${safe(x.category)}</td><td><span class="tag ${x.priority.toLowerCase()}">${safe(x.priority)}</span></td><td>${safe(x.location)}</td><td>${safe(x.date)}</td><td><span class="tag">${safe(x.status)}</span></td></tr>`).join(''):'<tr><td colspan="6" class="empty">No reports recorded.</td></tr>'}
+$('equipmentForm').addEventListener('submit',e=>{e.preventDefault();equipment.unshift({id:Date.now(),name:$('eName').value.trim(),type:$('eType').value,status:$('eStatus').value,date:$('eDate').value||'Not set',notes:$('eNotes').value.trim()});store.set('equipment',equipment);e.target.reset();renderEquipment();renderDashboard();showToast('Equipment record saved on this device.')});
+function renderEquipment(){$('equipmentCount').textContent=equipment.length+' assets';$('equipmentRows').innerHTML=equipment.length?equipment.map(x=>`<tr><td><b>${safe(x.name)}</b></td><td>${safe(x.type)}</td><td><span class="tag ${x.status==='Out of service'?'high':x.status==='Needs inspection'?'medium':'low'}">${safe(x.status)}</span></td><td>${safe(x.date)}</td><td>${safe(x.notes||'—')}</td></tr>`).join(''):'<tr><td colspan="5" class="empty">No equipment records.</td></tr>'}
+const answers=[
+{keys:['fire','smoke','burning'],reply:'FIRE SAFETY\n1. Raise the alarm and alert people nearby if it is safe to do so.\n2. Evacuate using the nearest safe exit; do not use lifts.\n3. Stay low if there is smoke and do not re-enter the building.\n4. Go to the designated assembly point and contact emergency services.\n5. Use a fire extinguisher only if trained, the fire is small, and you have a clear escape route.'},
+{keys:['cut','bleeding','wound'],reply:'MINOR CUT – GENERAL FIRST AID\n1. Make sure the area is safe and wash your hands if possible.\n2. Apply gentle, steady pressure with clean gauze or cloth to control bleeding.\n3. Once bleeding is controlled, rinse a minor wound with clean running water and cover it with a sterile dressing.\n4. Seek medical help for deep wounds, heavy or persistent bleeding, embedded objects, infection signs, or uncertainty. For severe bleeding, call emergency services immediately.'},
+{keys:['incident','report','hazard'],reply:'INCIDENT REPORTING\nRecord the date/time, general location, what you directly observed, any immediate safety action, and who was notified through the approved process. Be factual, avoid blame, and do not include personal identifiers or sensitive operational information. Use the Incident Reports section to create a demo record.'},
+{keys:['kit','prepare','emergency bag','supplies'],reply:'BASIC EMERGENCY KIT\nConsider drinking water, non-perishable food, a torch and spare batteries, a basic first-aid kit, essential medicines, a phone power bank, hygiene supplies, and copies of important contact details. Adapt the kit to official local guidance and individual needs.'},
+{keys:['earthquake','shaking'],reply:'EARTHQUAKE AWARENESS\nIf indoors, drop, cover and hold on; protect your head and neck and stay away from windows. Do not run outside while shaking is happening. After shaking stops, check for immediate hazards, evacuate if the building is unsafe, expect aftershocks and follow official instructions.'},
+{keys:['heat','dehydration','heatstroke'],reply:'HEAT ILLNESS AWARENESS\nMove the person to a cooler place, loosen excess clothing and begin cooling with cool water or wet cloths. Confusion, fainting, seizures or very high body temperature may indicate a life-threatening emergency: call emergency services and cool rapidly while awaiting help. Do not give fluids to someone who is unconscious or confused.'},
+{keys:['hello','hi','hey'],reply:'Hello. I can help with general emergency preparedness, basic first-aid awareness, incident documentation and safety checklists. What would you like to know?'}
+];
+function assistantReply(q){const s=q.toLowerCase();const hit=answers.find(a=>a.keys.some(k=>s.includes(k)));return hit?hit.reply:'I do not have a verified response for that question in this offline demo. For safety-critical situations, follow your organisation’s approved procedures and contact trained responders or local emergency services. I can help with general fire safety, minor cuts, incident reporting, emergency kits, earthquakes and heat illness.'}
+function addMsg(who,txt){const m=document.createElement('div');m.className='msg '+(who==='user'?'user':'');m.innerHTML='<small>'+(who==='user'?'YOU':'RAKSHAK ASSISTANT')+'</small>'+safe(txt);$('messages').appendChild(m);$('messages').scrollTop=$('messages').scrollHeight}
+function ask(q){if(!q.trim())return;addMsg('user',q);addMsg('bot',assistantReply(q));}
+function quickAsk(q){ask(q)}
+$('chatForm').addEventListener('submit',e=>{e.preventDefault();const q=$('chatInput').value;$('chatInput').value='';ask(q)});
+function simulateAlert(){const type=$('alertType').value,msg=$('alertMessage').value.trim();if(!msg){showToast('Enter a demonstration message first.');return}$('alertResult').innerHTML='<span style="color:var(--green)">✓ Simulation completed:</span> '+safe(type)+' preview created locally. No message was sent and no contacts were notified.';showToast('Demo alert simulated only.')}
+function updateChecklist(){const boxes=[...document.querySelectorAll('[data-check]')],done=boxes.filter(x=>x.checked).length,p=Math.round(done/boxes.length*100);$('checkPercent').textContent=p+'%';$('checkBar').style.width=p+'%';store.set('checks',boxes.map(x=>x.checked));renderDashboard()}
+document.querySelectorAll('[data-check]').forEach(x=>x.addEventListener('change',updateChecklist));
+function clearChecklist(){document.querySelectorAll('[data-check]').forEach(x=>x.checked=false);updateChecklist();showToast('Checklist cleared.')}
+$('exportBtn').addEventListener('click',()=>{const data={exportedAt:new Date().toISOString(),notice:'Fictional demo data only. Do not use for sensitive information.',incidents,equipment,checklist:store.get('checks',[])};const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='rakshak-demo-data.json';a.click();URL.revokeObjectURL(a.href);showToast('Demo data exported.')});
+$('resetBtn').addEventListener('click',()=>{if(!confirm('Delete all RAKSHAK demo records stored in this browser?'))return;incidents=[];equipment=[];store.set('incidents',[]);store.set('equipment',[]);document.querySelectorAll('[data-check]').forEach(x=>x.checked=false);updateChecklist();renderIncidents();renderEquipment();renderDashboard();showToast('Demo data reset.')});
+const saved=store.get('checks',[]);document.querySelectorAll('[data-check]').forEach((x,i)=>x.checked=!!saved[i]);updateChecklist();renderIncidents();renderEquipment();renderDashboard();
+</script>
+</body>
+</html>
